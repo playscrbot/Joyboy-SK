@@ -87,7 +87,7 @@ def get_latest_manganato_chapter():
 @tasks.loop(seconds=30)  # Run the task every 60 seconds (adjust as needed)
 async def check_and_post_latest_chapter():
     await bot.wait_until_ready()
-    channel_id = 1135029933039702026  # Replace with the channel ID where you want to send the notifications
+    channel_id = # Replace with the channel ID where you want to send the notifications
     channel = bot.get_channel(channel_id)
 
     try:
@@ -108,8 +108,8 @@ async def check_and_post_latest_chapter():
 
 # Create a new bot instance with a specified command prefix
 bot = commands.Bot(command_prefix='//',  intents=intents)
-openai.api_key = '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'
-W_API_KEY = 'e5a0dd049c0952a34c8b5afa99da7486'
+openai.api_key = YOUR_OPENAI_API_KEY
+W_API_KEY = YOUR_API_KEY
 giphy_api = giphy_client.DefaultApi()
 
 
@@ -135,7 +135,7 @@ async def latest_chapter(ctx):
 @bot.command()
 async def join(ctx, member: discord.Member):
     welcome_channel_name = 'welcome'  # Replace 'welcome' with the name of your welcome channel
-    attachments_channel_id = 1134233979290136596  # Replace with the ID of the channel with attachments
+    attachments_channel_id = # Replace with the ID of the channel with attachments
 
     # Find the welcome channel
     channel = discord.utils.get(member.guild.text_channels, name=welcome_channel_name)
@@ -174,7 +174,7 @@ async def join(ctx, member: discord.Member):
 @bot.event
 async def on_member_join(member: discord.Member):
     welcome_channel_name = 'welcome'  # Replace 'welcome' with the name of your welcome channel
-    attachments_channel_id = 1134233979290136596  # Replace with the ID of the channel with attachments
+    attachments_channel_id = # Replace with the ID of the channel with attachments
 
     # Find the welcome channel
     channel = discord.utils.get(member.guild.text_channels, name=welcome_channel_name)
@@ -224,74 +224,74 @@ async def on_member_remove(member):
 
 @bot.command()
 async def start_awkword(ctx):
-    link = await bot.togetherControl.create_link(996349129372487754, 'awkword')
+    link = await bot.togetherControl.create_link(ID, 'awkword')
     await ctx.send(f"Click the blue link!\n{link}")
     
 
 @bot.command()
 async def start_youtube(ctx):
-    link = await bot.togetherControl.create_link(996349129372487754, 'youtube')
+    link = await bot.togetherControl.create_link(ID, 'youtube')
     await ctx.send(f"Click the blue link!\n{link}")
 
 
 @bot.command()
 async def start_poker(ctx):
-    link = await bot.togetherControl.create_link(996349129372487754, 'poker')
+    link = await bot.togetherControl.create_link(ID, 'poker')
     await ctx.send(f"Click the blue link!\n{link}")
 
 @bot.command()
 async def land_io(ctx):
-    link = await bot.togetherControl.create_link(996349129372487754, 'land-io')
+    link = await bot.togetherControl.create_link(ID, 'land-io')
     await ctx.send(f"Click the blue link!\n{link}")
 
 @bot.command()
 async def start_party(ctx):
-    link = await bot.togetherControl.create_link(996349129372487754, 'putt-party')
+    link = await bot.togetherControl.create_link(ID, 'putt-party')
     await ctx.send(f"Click the blue link!\n{link}")
 
 @bot.command()
 async def start_chess(ctx):
-    link = await bot.togetherControl.create_link(996349129372487754, 'chess')
+    link = await bot.togetherControl.create_link(ID, 'chess')
     await ctx.send(f"Click the blue link!\n{link}")
 
 @bot.command()
 async def start_bobble(ctx):
-    link = await bot.togetherControl.create_link(996349129372487754, 'bobble-league')
+    link = await bot.togetherControl.create_link(ID, 'bobble-league')
     await ctx.send(f"Click the blue link!\n{link}")
 
 @bot.command()
 async def start_asking(ctx):
-    link = await bot.togetherControl.create_link(996349129372487754, 'ask-away')
+    link = await bot.togetherControl.create_link(ID, 'ask-away')
     await ctx.send(f"Click the blue link!\n{link}")
 
 @bot.command()
 async def start_word(ctx):
-    link = await bot.togetherControl.create_link(996349129372487754, 'word-snack')
+    link = await bot.togetherControl.create_link(ID, 'word-snack')
     await ctx.send(f"Click the blue link!\n{link}")
 
 @bot.command()
 async def start_blazing(ctx):
-    link = await bot.togetherControl.create_link(996349129372487754, 'blazing-8s')
+    link = await bot.togetherControl.create_link(ID, 'blazing-8s')
     await ctx.send(f"Click the blue link!\n{link}")
 
 @bot.command()
 async def start_spellcast(ctx):
-    link = await bot.togetherControl.create_link(996349129372487754, 'spellcast')
+    link = await bot.togetherControl.create_link(ID, 'spellcast')
     await ctx.send(f"Click the blue link!\n{link}")
 
 @bot.command()
 async def start_letter(ctx):
-    link = await bot.togetherControl.create_link(996349129372487754, 'letter-league')
+    link = await bot.togetherControl.create_link(ID, 'letter-league')
     await ctx.send(f"Click the blue link!\n{link}")
 
 @bot.command()
 async def start_checkers(ctx):
-    link = await bot.togetherControl.create_link(996349129372487754, 'checkers')
+    link = await bot.togetherControl.create_link(ID, 'checkers')
     await ctx.send(f"Click the blue link!\n{link}")
 
 @bot.command()
 async def start_sketch(ctx):
-    link = await bot.togetherControl.create_link(996349129372487754, 'sketch-heads')
+    link = await bot.togetherControl.create_link(ID, 'sketch-heads')
     await ctx.send(f"Click the blue link!\n{link}")
           
 # Command to pout
@@ -303,7 +303,7 @@ async def picknose(ctx):
         giphy_api_instance = giphy_client.DefaultApi()
 
         # Search for "pout" GIFs using the Giphy API 
-        api_key = 's70oY7DZ2Y3onqVhZKCujcLWQngWLMfj'
+        api_key = GIPHY_API_KEY
         query = 'luffy pick his nose'
         api_response = giphy_api_instance.gifs_search_get(api_key, query, limit=1)
 
@@ -1253,7 +1253,7 @@ async def hug(ctx, user: discord.Member):
         giphy_api_instance = giphy_client.DefaultApi()
 
         # Search for "luffy hug" GIFs using the Giphy API
-        api_key = 's70oY7DZ2Y3onqVhZKCujcLWQngWLMfj'
+        api_key = GIPHY_API_KEY
         query = 'luffy hug'
         api_response = giphy_api_instance.gifs_search_get(api_key, query, limit=1)
 
@@ -1275,7 +1275,7 @@ async def punch(ctx, user: discord.Member):
         giphy_api_instance = giphy_client.DefaultApi()
 
         # Search for "punch" GIFs using the Giphy API
-        api_key = 's70oY7DZ2Y3onqVhZKCujcLWQngWLMfj'
+        api_key = GIPHY_API_KEY
         query = 'luffy punch'
         api_response = giphy_api_instance.gifs_search_get(api_key, query, limit=1)
 
@@ -1296,7 +1296,7 @@ async def confused(ctx, user: discord.Member):
 
     try:
         # Search for confused GIFs using the Giphy API 
-        api_key = 's70oY7DZ2Y3onqVhZKCujcLWQngWLMfj'
+        api_key = GIPHY_API_KEY
         query = 'luffy confused'
         api_response = giphy_api_instance.gifs_search_get(api_key, query, limit=1)
         
@@ -1469,7 +1469,7 @@ async def gif(ctx, *, query):
         if query in previous_queries:
             gifs = previous_queries[query]
         # Search for GIFs using the Giphy API 
-        api_key = 's70oY7DZ2Y3onqVhZKCujcLWQngWLMfj'
+        api_key = GIPHY_API_KEY
         api_response = giphy_api_instance.gifs_search_get(api_key, query, limit=50)
         gifs = [gif.images.downsized.url for gif in api_response.data]
         # Store the query and corresponding GIFs in the dictionary
@@ -4204,4 +4204,4 @@ keep_alive()
     
 
 # Run the bot with your bot token
-bot.run('MTEyMjg3NjgwNjIyNDE1MDU1OA.GB4hAN.MZEhIKgdg7LvEpMwz4kUMlQp9hchyI7PrLG0xw')
+bot.run(YOUR_DISCORD_BOT_TOKEN)
