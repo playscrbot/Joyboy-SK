@@ -2,6 +2,8 @@
 <a href="https://discord.com/invite/uUBmxs9nME"><img src="uploads/Profile.jpg" /></a>
 
 [![Discord](https://img.shields.io/discord/996349128365846528?logo=discord&label=discord&logoColor=white)](https://discord.com/invite/uUBmxs9nME)
+[![Issues](https://img.shields.io/github/issues/playscrbot/Joyboy-SK?style=flat-square)](https://github.com/playscrbot/Joyboy-SK)
+[![Pull requests](https://img.shields.io/github/issues-pr/playscrbot/Joyboy-SK?style=flat-square)](https://github.com/playscrbot/Joyboy-SK)
 
 A Fun and Games Discord bot designed for anime community with many features tailored towards anime content.
 
@@ -160,11 +162,11 @@ As Your feedback is valuable in shaping the direction of the bot's development!
 
 
 ## License 🚨
-This project is licensed under the [MIT] License - see the LICENSE.md file for details
+This project is licensed under the [MIT] License - see the LICENSE.txt file for details
 
 ## Author 🤗
 <a href="https://youtube.com/@playscript"><img src="uploads/playscript2.png" /></a>
-### `👤 PlayScript`
+#### `👤 PlayScript`
 
 Website: https://youtube.com/@playscript
 
